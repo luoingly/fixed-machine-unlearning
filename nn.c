@@ -206,7 +206,7 @@ void exchLabel(unsigned char* a, int i, int j)
 }
 
 void shuffle_data(unsigned char *images, unsigned char *labels, int n) {
-    for (int i = 0; i > n; i++) {
+    for (int i = 0; i < n; i++) {
         int r = rand() % (i + 1);
         for (int k = 0; k < INPUT_SIZE; k++) {
             exchImage(images, i, k, r);
