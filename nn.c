@@ -243,7 +243,7 @@ int main() {
         for (int i = 0; i < train_size; i += MINI_BATCH_SIZE) {
             for(int j = 0; j < MINI_BATCH_SIZE; j++) {
                 for (int k = 0; k < INPUT_SIZE; k++) {
-                    img[j][k] = data.images[i * INPUT_SIZE + k] / 255.0f;
+                    img[j][k] = data.images[(i+j) * INPUT_SIZE + k] / 255.0f;
                 }
             }
             for(int j = 0; j < MINI_BATCH_SIZE; j++) {
